@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "c3a6c927-dbcd-4cc2-8b11-e61c8024ff80",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "燈籠魚6": {
+      "ver": "1.0.4",
+      "uuid": "11bdc1d9-3c0e-4a32-92f5-cbffcc97d896",
+      "rawTextureUuid": "c3a6c927-dbcd-4cc2-8b11-e61c8024ff80",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 185,
+      "height": 80,
+      "rawWidth": 185,
+      "rawHeight": 80,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

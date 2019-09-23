@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "a9bcd76e-6c49-407e-8938-12be9a158662",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "銀鯊魚死亡1": {
+      "ver": "1.0.4",
+      "uuid": "f78cb70c-e17f-4780-911e-1bc9d5d280e0",
+      "rawTextureUuid": "a9bcd76e-6c49-407e-8938-12be9a158662",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0.5,
+      "trimX": 2,
+      "trimY": 3,
+      "width": 605,
+      "height": 283,
+      "rawWidth": 610,
+      "rawHeight": 290,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

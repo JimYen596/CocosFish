@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "1847faf9-f20b-4033-af35-d5565b364297",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "條紋魚死亡3": {
+      "ver": "1.0.4",
+      "uuid": "9c89bf97-7840-409d-b991-a463d5d1cbaa",
+      "rawTextureUuid": "1847faf9-f20b-4033-af35-d5565b364297",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 67,
+      "height": 35,
+      "rawWidth": 67,
+      "rawHeight": 35,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "36b3253e-5760-4e5b-95ec-98f4597e4d8d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "海龜死亡6": {
+      "ver": "1.0.4",
+      "uuid": "e34d1408-e228-4fe2-9276-f29f3771e9cf",
+      "rawTextureUuid": "36b3253e-5760-4e5b-95ec-98f4597e4d8d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 107,
+      "height": 118,
+      "rawWidth": 107,
+      "rawHeight": 118,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "8a289216-164f-4eef-b29d-6b5c7ef13bfa",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "多利魚死亡2": {
+      "ver": "1.0.4",
+      "uuid": "06cde0e5-27fa-4292-b8c0-8ae2079def43",
+      "rawTextureUuid": "8a289216-164f-4eef-b29d-6b5c7ef13bfa",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 153,
+      "height": 77,
+      "rawWidth": 153,
+      "rawHeight": 77,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

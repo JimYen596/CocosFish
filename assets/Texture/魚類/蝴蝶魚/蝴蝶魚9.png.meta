@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "564c2b0a-986e-4f6c-88f6-edfe5621e0b4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "蝴蝶魚9": {
+      "ver": "1.0.4",
+      "uuid": "a47a972e-620a-4d35-9f93-b6a6151c5ffd",
+      "rawTextureUuid": "564c2b0a-986e-4f6c-88f6-edfe5621e0b4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 182,
+      "height": 165,
+      "rawWidth": 182,
+      "rawHeight": 165,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

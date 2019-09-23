@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "c4dac211-1c16-4252-9154-ca308ded0248",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "燈籠魚死亡1": {
+      "ver": "1.0.4",
+      "uuid": "ef28a662-6cfb-44f7-93d0-fcdc5f6efef2",
+      "rawTextureUuid": "c4dac211-1c16-4252-9154-ca308ded0248",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 179,
+      "height": 115,
+      "rawWidth": 179,
+      "rawHeight": 115,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

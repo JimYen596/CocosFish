@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "6f20b6ff-403a-429b-a4cc-0bf63e08f45e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "河豚死亡2": {
+      "ver": "1.0.4",
+      "uuid": "345887b8-1c10-4271-ba24-150de8d783ca",
+      "rawTextureUuid": "6f20b6ff-403a-429b-a4cc-0bf63e08f45e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 88,
+      "height": 26,
+      "rawWidth": 88,
+      "rawHeight": 26,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

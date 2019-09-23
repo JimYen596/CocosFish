@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "dbe603e6-2bd6-4727-8860-ad7da1bbaa61",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "熱帶魚2-16": {
+      "ver": "1.0.4",
+      "uuid": "d4b12467-299c-40c6-9863-cfbc1542ab88",
+      "rawTextureUuid": "dbe603e6-2bd6-4727-8860-ad7da1bbaa61",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 144,
+      "height": 52,
+      "rawWidth": 144,
+      "rawHeight": 52,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

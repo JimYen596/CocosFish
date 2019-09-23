@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "66c4b31e-935b-4bcc-9d83-59be14affb62",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "多莉18": {
+      "ver": "1.0.4",
+      "uuid": "613d6d62-aaf9-48e9-b0a0-8884db3e03bd",
+      "rawTextureUuid": "66c4b31e-935b-4bcc-9d83-59be14affb62",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 156,
+      "height": 86,
+      "rawWidth": 156,
+      "rawHeight": 86,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

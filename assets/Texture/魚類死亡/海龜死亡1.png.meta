@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "206a87c2-8179-45b2-9802-75cc9e35f02c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "海龜死亡1": {
+      "ver": "1.0.4",
+      "uuid": "964dd881-2577-47f9-aa5a-7219ac20e525",
+      "rawTextureUuid": "206a87c2-8179-45b2-9802-75cc9e35f02c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 157,
+      "height": 124,
+      "rawWidth": 157,
+      "rawHeight": 124,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

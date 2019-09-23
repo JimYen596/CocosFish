@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "a30d5746-45ee-4465-8fa6-950bfe5d7182",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "蝴蝶魚死亡1": {
+      "ver": "1.0.4",
+      "uuid": "d6fd3b26-9d48-4953-ac05-8adc0ffc1e9d",
+      "rawTextureUuid": "a30d5746-45ee-4465-8fa6-950bfe5d7182",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 168,
+      "height": 173,
+      "rawWidth": 168,
+      "rawHeight": 173,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

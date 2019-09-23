@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "d8b49e22-f839-48d8-bb85-93f11fe9b2dd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "熱帶魚2死亡2": {
+      "ver": "1.0.4",
+      "uuid": "f20a11b8-dd21-4d83-973a-aebda23fbc07",
+      "rawTextureUuid": "d8b49e22-f839-48d8-bb85-93f11fe9b2dd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 135,
+      "height": 50,
+      "rawWidth": 135,
+      "rawHeight": 50,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
