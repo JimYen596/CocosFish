@@ -44,7 +44,7 @@ export default class Game extends cc.Component {
     }
 
     public handleDoubleClickEvent(location: Vec2) {
-        cc.log("doubleClicked");
+        this.cannon.getComponent("Cannon").startAutoFire();
     }
 
     private setPhysics() {
@@ -54,9 +54,10 @@ export default class Game extends cc.Component {
     }
 
     private onTouchStart (event) {
+        const cannon = this.cannon.getComponent("Cannon");
         this.sniperTarget.opacity = 255;
         this.sniperTarget.setPosition(event.getLocation());
-        this.cannon.getComponent("Cannon").fire();
+        cannon.fire();
     }
 
     private onTouchMove (event) {

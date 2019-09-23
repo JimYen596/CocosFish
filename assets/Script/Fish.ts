@@ -1,3 +1,5 @@
+import Vec2 = cc.Vec2;
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -27,11 +29,5 @@ export default class Fish extends cc.Component {
     public update(dt: number) {
         const position = this.node.getPosition();
         this.node.setPosition(cc.v2(position.x + 1, position.y));
-    }
-
-    public onClicked() {
-        const game = cc.Canvas.instance.getComponent("Game");
-        game.sniperTarget.getComponent("Target").focusNode = this.node;
-        game.cannon.getComponent("Cannon").fire();
     }
 }

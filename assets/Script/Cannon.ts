@@ -5,26 +5,17 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Cannon extends cc.Component {
 
-    @property({tooltip: "鎖定模式"})
-    focusMode: boolean = false;
-
     @property({tooltip: "自動模式"})
     autoMode: boolean = false;
 
     @property({type: cc.Prefab})
     public bulletPrefab: cc.Prefab = null;
 
-    private onFire: boolean = false;
+    private autoTimer;
 
 
     public update(dt: number) {
-        if (this.autoMode && !this.onFire) {
-            this.onFire = true;
-            this.schedule(this.fire, 500, cc.macro.REPEAT_FOREVER);
-        } else {
-            this.onFire = false;
-            this.unschedule(this.fire);
-        }
+
     }
 
     public rotate(angle: number) {
@@ -47,6 +38,16 @@ export default class Cannon extends cc.Component {
         this.rotate(angle);
         bulletNode.getComponent("Bullet").rotateByAngle(angle);
         bulletNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(direction.x * bulletSpeed, direction.y * bulletSpeed);
+    }
+
+    public startAutoFire() {
+        this.autoMode = true;
+        this.autoTimer = setInterval(this.fire.bind(this), 300);
+    }
+
+    public stopAutoMode() {
+        clearInterval(this.autoTimer);
+        this.autoMode = false;
     }
 
     private getWorldLocation(position?: Vec2): Vec2 {
