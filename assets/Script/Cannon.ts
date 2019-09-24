@@ -5,9 +5,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Cannon extends cc.Component {
 
-    @property({tooltip: "鎖定模式"})
-    focusMode: boolean = false;
-
     @property({tooltip: "自動模式"})
     autoMode: boolean = false;
 
@@ -22,31 +19,26 @@ export default class Cannon extends cc.Component {
     }
 
     public fire() {
+        const targetLocation = cc.Canvas.instance.node.getComponent("Game").sniperTarget.getPosition();
+        const cannonPos = this.getWorldLocation(this.node.getPosition());
+        const bulletNode = cc.instantiate(this.bulletPrefab);
+        cc.find("Canvas").addChild(bulletNode);
 
-        if (!this.focusMode) {
-            const targetLocation = cc.Canvas.instance.node.getComponent("Game").sniperTarget.getPosition();
-            const cannonPos = this.getWorldLocation(this.node.getPosition());
-            const bulletNode = cc.instantiate(this.bulletPrefab);
-            cc.find("Canvas").addChild(bulletNode);
+        bulletNode.setPosition(cc.v2(this.node.getPosition().x, this.node.getPosition().y + 10));
+        bulletNode.setSiblingIndex(6);
 
-            bulletNode.setPosition(cc.v2(this.node.getPosition().x, this.node.getPosition().y + 10));
-            bulletNode.setSiblingIndex(6);
-
-            const bulletSpeed = bulletNode.getComponent("Bullet").speed;
-            const direction = targetLocation.sub(cannonPos).normalize();
-            const angle = direction.signAngle(cc.v2(0, 1));
-            this.rotate(angle);
-            bulletNode.getComponent("Bullet").rotateByAngle(angle);
-            bulletNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(direction.x * bulletSpeed, direction.y * bulletSpeed);
-        } else {
-
-        }
+        const bulletSpeed = bulletNode.getComponent("Bullet").speed;
+        const direction = targetLocation.sub(cannonPos).normalize();
+        const angle = direction.signAngle(cc.v2(0, 1));
+        this.rotate(angle);
+        bulletNode.getComponent("Bullet").rotateByAngle(angle);
+        bulletNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(direction.x * bulletSpeed, direction.y * bulletSpeed);
     }
 
     public startAutoAttack() {
         this.autoMode = true;
         this.fire();
-        this.autoAttackTimer = setInterval(this.fire, 300);
+        this.autoAttackTimer = setInterval(this.fire.bind(this), 300);
     }
 
     public stopAutoAttack() {
