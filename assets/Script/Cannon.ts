@@ -1,4 +1,5 @@
 import Vec2 = cc.Vec2;
+import {getDegreeByDirection} from "../Utils/getDegreeByDirection";
 
 const {ccclass, property} = cc._decorator;
 
@@ -33,9 +34,7 @@ export default class Cannon extends cc.Component {
             bulletNode.setSiblingIndex(6);
 
             const direction = targetLocation.sub(cannonPos).normalize();
-            const angle = Math.atan2(direction.y, direction.x);
-            const degree = angle * 180 / Math.PI;
-            this.node.angle = degree - 90;
+            this.node.angle = getDegreeByDirection(direction) - 90;
 
             bulletNode.getComponent("Bullet").shootTo(direction);
         }
