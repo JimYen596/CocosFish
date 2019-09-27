@@ -1,4 +1,4 @@
-import {PhysicsColliderTag} from "../Constants/PhysicsColliderTag";
+import {getDegreeByDirection} from "../Utils/getDegreeByDirection";
 
 const {ccclass, property} = cc._decorator;
 
@@ -6,40 +6,37 @@ const {ccclass, property} = cc._decorator;
 export default class Bullet extends cc.Component {
 
     @property
-    public speed: number = 0;
+    public speed: number = 100;
 
     @property
     public damage: number = 0;
 
-    public onEndContact(contact, selfCollider, otherCollider) {
-        const linearVelocity = this.node.getComponent(cc.RigidBody).linearVelocity;
-        let rotateDegree = 0;
-        if (otherCollider.node.group === "wall") {
-            switch (otherCollider.tag) {
-                case PhysicsColliderTag.TOP_WALL:
-                case PhysicsColliderTag.BOTTOM_WALL:
-                    rotateDegree = linearVelocity.x * (1 / Math.abs(linearVelocity.x)) * Math.abs(180 - Math.abs(this.node.rotation));
-                    break;
-                case PhysicsColliderTag.LEFT_WALL:
-                case PhysicsColliderTag.RIGHT_WALL:
-                    rotateDegree = -this.node.rotation;
-                    break;
-                default:
-                    break;
-            }
-            this.rotateByDegree(rotateDegree);
-        } else if (otherCollider.node.group === "fish") {
-            this.node.destroy();
+    @property
+    public degree: number = 0;
+
+    private shot = false;
+
+    public update(dt: number) {
+        if (this.shot) {
+            const velocity = this.node.getComponent("cc.RigidBody").linearVelocity;
+            this.node.angle = getDegreeByDirection(velocity) - 90;
         }
     }
 
-    public rotateByAngle(angle: number) {
-        const rotation = cc.rotateTo(0.1, cc.misc.radiansToDegrees(angle));
-        this.node.runAction(rotation);
+    public shootTo(degree: number) {
+        this.shot = true;
     }
 
-    public rotateByDegree(degree: number) {
-        const rotation = cc.rotateTo(0, degree);
-        this.node.runAction(rotation);
+    public onBeginContact(contact, selfCollider, otherCollider) {
+        if (otherCollider.node.group === "fish") {
+            const anim = this.getComponent(cc.Animation);
+            let animState = anim.getAnimationState("explosion_1");
+            animState.wrapMode = cc.WrapMode.Normal;
+            anim.on("finished", () => {
+                this.node.destroy();
+            });
+            anim.play("explosion_1");
+            this.node.getComponent("cc.RigidBody").linearVelocity = cc.v2(0, 0);
+        }
     }
 }
