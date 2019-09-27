@@ -5,24 +5,11 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class Game extends cc.Component {
 
-    @property(cc.Prefab)
-    public bulletPrefab: cc.Prefab;
-
     @property(cc.Node)
     public weapon: cc.Node;
 
-    @property(cc.Node)
-    public sniperTarget: cc.Node;
-
-    @property(cc.Prefab)
-    public fish: cc.Prefab;
-
     public onLoad () {
         this.setPhysics();
-
-        const fishPrefab = cc.instantiate(this.fish);
-        cc.Canvas.instance.node.addChild(fishPrefab);
-        fishPrefab.setPosition(cc.v2(0, 0));
     }
 
     public update(dt: number) {

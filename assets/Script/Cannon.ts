@@ -14,6 +14,9 @@ export default class Cannon extends cc.Component {
     @property({tooltip: "最大子彈數"})
     maxExistBullet: number = 0;
 
+    @property({type: cc.Node, tooltip: "準心"})
+    public sniperTarget: cc.Node = null;
+
     @property({type: cc.Prefab, tooltip: "預設子彈"})
     public bulletPrefab: cc.Prefab = null;
 
@@ -21,20 +24,20 @@ export default class Cannon extends cc.Component {
 
     public fire() {
         if (cc.Canvas.instance.node.children.filter((i) => i.name === this.bulletPrefab.name).length < this.maxExistBullet) {
-            const targetLocation = cc.Canvas.instance.node.getComponent("Game").sniperTarget.getPosition();
+            const targetLocation = this.sniperTarget.getPosition();
             const cannonPos = this.getWorldLocation(this.node.getPosition());
             const bulletNode = cc.instantiate(this.bulletPrefab);
             cc.find("Canvas").addChild(bulletNode);
 
-            bulletNode.setPosition(cc.v2(this.node.getPosition().x, this.node.getPosition().y + 10));
+            bulletNode.setPosition(cc.v2(this.node.getParent().getPosition().x, this.node.getParent().getPosition().y));
             bulletNode.setSiblingIndex(6);
 
-            const bulletSpeed = bulletNode.getComponent("Bullet").speed;
             const direction = targetLocation.sub(cannonPos).normalize();
-            const angle = direction.signAngle(cc.v2(0, 1));
-            this.rotate(angle);
-            bulletNode.getComponent("Bullet").rotateByAngle(angle);
-            bulletNode.getComponent(cc.RigidBody).linearVelocity = cc.v2(direction.x * bulletSpeed, direction.y * bulletSpeed);
+            const angle = Math.atan2(direction.y, direction.x);
+            const degree = angle * 180 / Math.PI;
+            this.node.angle = degree - 90;
+
+            bulletNode.getComponent("Bullet").shootTo(direction);
         }
     }
 
@@ -47,11 +50,6 @@ export default class Cannon extends cc.Component {
     public stopAutoAttack() {
         this.autoMode = false;
         clearInterval(this.autoAttackTimer);
-    }
-
-    private rotate(angle: number) {
-        const rotation = cc.rotateTo(0.1, cc.misc.radiansToDegrees(angle));
-        this.node.runAction(rotation);
     }
 
     private getWorldLocation(position?: Vec2): Vec2 {
